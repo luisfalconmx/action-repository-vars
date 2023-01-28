@@ -1,4 +1,4 @@
-on: [workflow_distpatch]
+on: [workflow_dispatch]
 
 jobs:
   main:
