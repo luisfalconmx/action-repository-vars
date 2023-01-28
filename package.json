@@ -1,8 +1,8 @@
 {
   "name": "action-repository-vars",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "GitHub action than retrieves all metadata from your repository and uses like env vars",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
