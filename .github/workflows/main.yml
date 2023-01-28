@@ -13,4 +13,4 @@ jobs:
         uses: ./
 
       - name: Print Environment Variables
-        run: echo ${{env}}
+        run: echo ${{env.REPOSITORY_FULL_NAME}}
