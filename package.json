@@ -1,0 +1,32 @@
+{
+  "name": "action-repository-vars",
+  "version": "1.0.0",
+  "description": "GitHub action than retrieves all metadata from your repository and uses like env vars",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc",
+    "package": "ncc build --source-map --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisfalconmx/action-repository-vars.git"
+  },
+  "keywords": [
+    "github-actions"
+  ],
+  "author": "luisfalconmx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luisfalconmx/action-repository-vars/issues"
+  },
+  "homepage": "https://github.com/luisfalconmx/action-repository-vars#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.4"
+  }
+}
