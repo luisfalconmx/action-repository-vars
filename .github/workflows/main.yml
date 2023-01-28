@@ -4,6 +4,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     name: Repository Vars
+    timeout-minutes: 5
     steps:
       - name: Setup repository variables
         uses: ./
