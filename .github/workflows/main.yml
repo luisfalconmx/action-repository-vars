@@ -1,0 +1,12 @@
+on: [workflow_distpatch]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    name: Repository Vars
+    steps:
+      - name: Setup repository variables
+        uses: ./
+
+      - name: Print Environment Variables
+        run: echo ${{env}}
