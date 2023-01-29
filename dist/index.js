@@ -42,6 +42,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const core_1 = __nccwpck_require__(6762);
 function run() {
+    var _a, _b, _c;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const GITHUB_TOKEN = process.env['GITHUB_TOKEN'];
@@ -59,7 +60,103 @@ function run() {
                 {
                     name: 'REPOSITORY_FULL_NAME',
                     value: data.full_name
-                }
+                },
+                {
+                    name: 'REPOSITORY_SLUG',
+                    value: data.name
+                },
+                {
+                    name: 'REPOSITORY_NAME',
+                    value: data.name.replace('-', ' ')
+                },
+                {
+                    name: 'REPOSITORY_DESCRIPTION',
+                    value: data.description
+                },
+                {
+                    name: 'REPOSITORY_CREATED_AT',
+                    value: data.created_at
+                },
+                {
+                    name: 'REPOSITORY_UPDATED_AT',
+                    value: data.updated_at
+                },
+                {
+                    name: 'REPOSITORY_PUSHED_AT',
+                    value: data.pushed_at
+                },
+                {
+                    name: 'REPOSITORY_DEFAULT_BRANCH',
+                    value: data.default_branch
+                },
+                {
+                    name: 'REPOSITORY_CODE_OF_CONDUCT_URL',
+                    value: (_a = data.code_of_conduct) === null || _a === void 0 ? void 0 : _a.url
+                },
+                {
+                    name: 'REPOSITORY_CONTRIBUTING_URL',
+                    value: data.contributors_url
+                },
+                {
+                    name: 'REPOSITORY_LICENSE',
+                    value: (_b = data.license) === null || _b === void 0 ? void 0 : _b.name
+                },
+                {
+                    name: 'REPOSITORY_LICENSE_URL',
+                    value: (_c = data.license) === null || _c === void 0 ? void 0 : _c.url
+                },
+                {
+                    name: 'REPOSITORY_README_URL',
+                    value: `${data.url}/README.md`
+                },
+                {
+                    name: 'REPOSITORY_WATCHERS_COUNT',
+                    value: data.watchers_count
+                },
+                {
+                    name: 'REPOSITORY_STARGAZERS_COUNT',
+                    value: data.stargazers_count
+                },
+                {
+                    name: 'REPOSITORY_FORKS_COUNT',
+                    value: data.forks_count
+                },
+                {
+                    name: 'REPOSITORY_OWNER',
+                    value: data.owner.name
+                },
+                {
+                    name: 'OWNER_PROFILE',
+                    value: data.owner.url
+                },
+                {
+                    name: 'OWNER_AVATAR_URL',
+                    value: data.owner.avatar_url
+                },
+                {
+                    name: 'OWNER_TYPE',
+                    value: data.owner.type
+                },
+                {
+                    name: 'OWNER_EMAIL',
+                    value: data.owner.email
+                },
+                {
+                    name: 'REPOSITORY_GITHUB_URL',
+                    value: data.url
+                },
+                {
+                    name: 'REPOSITORY_HOMEPAGE_URL',
+                    value: data.homepage
+                },
+                {
+                    name: 'REPOSITORY_GIT_URL',
+                    value: data.git_url
+                },
+                {
+                    name: 'REPOSITORY_SSH_URL',
+                    value: data.ssh_url
+                },
             ];
             vars.map(variable => {
                 core.exportVariable(variable.name, variable.value);
