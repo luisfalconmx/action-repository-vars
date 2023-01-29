@@ -1,6 +1,6 @@
 {
   "name": "action-repository-vars",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "GitHub action than retrieves all metadata from your repository and uses like env vars",
   "main": "dist/index.js",
   "scripts": {
