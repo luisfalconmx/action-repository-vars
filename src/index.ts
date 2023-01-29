@@ -33,7 +33,7 @@ async function run() {
       },
       {
         name: 'REPOSITORY_NAME',
-        value: data.name.replace('-', ' ')
+        value: data.name.replace(/-/g, ' ')
       },
       {
         name: 'REPOSITORY_DESCRIPTION',
@@ -128,6 +128,8 @@ async function run() {
     vars.map(variable => {
       core.exportVariable(variable.name, variable.value)
     })
+
+    core.info('All variables setting successfully')
     
   } catch (error: any) {
     core.setFailed(error.message);
